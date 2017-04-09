@@ -1,1 +1,3 @@
-# typescript-microservice-starter
+# TypeScript Microservice Starter
+
+A TypeScript microservice starter kit
