@@ -1,0 +1,36 @@
+{
+  "name": "typescript-microservice-starter",
+  "version": "0.1.0",
+  "description": "TypeScript microservice starter project.",
+  "main": "build",
+  "author": "Maksim Sinik <maksim@sinik.it>",
+  "license": "MIT",
+  "scripts": {
+    "predev": "npm-run-all --parallel security-check lint",
+    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'node_modules/.bin/ts-node' --inspect ./src/index.ts",
+    "prebuild": "npm-run-all clean-build security-check lint",
+    "build": "tsc",
+    "lint": "node_modules/.bin/tslint -c tslint.json -t stylish --type-check -p ./tsconfig.json 'src/**/*.ts'",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel dev localtunnel",
+    "clean-build": "rimraf ./build && mkdir build",
+    "start": "NODE_ENV=production node ./build",
+    "debug": "ts-node --inspect ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nucleode/typescript-microservice-starter.git"
+  },
+  "devDependencies": {
+    "@types/node": "~7.0.12",
+    "localtunnel": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "nsp": "^2.6.3",
+    "rimraf": "~2.6.1",
+    "ts-node": "~3.0.2",
+    "tslint": "~5.0.0",
+    "typescript": "~2.2.2"
+  }
+}
