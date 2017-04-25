@@ -2,6 +2,8 @@
 
 # TypeScript Microservice Starter
 
+[![bitHound Dev Dependencies](https://www.bithound.io/github/nucleode/typescript-microservice-starter/badges/devDependencies.svg)](https://www.bithound.io/github/nucleode/typescript-microservice-starter/master/dependencies/npm)
+
 This is an easy boilerplate for building Node.js microservices with TypeScript. Put your typescript code inside `./src` folder and you are ready to go!
 
 ## Features
