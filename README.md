@@ -1,3 +1,4 @@
 # TypeScript Microservice Starter
 
-A TypeScript microservice starter kit
+A TypeScript starter-kit for building microservices with Node.js. 
+
