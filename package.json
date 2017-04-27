@@ -15,12 +15,15 @@
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel dev localtunnel",
     "clean-build": "rimraf ./build && mkdir build",
-    "start": "NODE_ENV=production node ./build",
+    "start": "NODE_ENV=production node -r dotenv/config ./build",
     "debug": "ts-node --inspect ./src/index.ts"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nucleode/typescript-microservice-starter.git"
+  },
+  "dependencies": {
+    "dotenv": "~4.0.0"
   },
   "devDependencies": {
     "@types/node": "^7.0.12",
