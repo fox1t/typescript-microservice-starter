@@ -1,4 +1,4 @@
-FROM node:7.8.0-alpine
+FROM node:9.4.0-alpine
 
 RUN addgroup -S app && adduser -S -G app -s /bin/false app
 ENV HOME=/home/app
@@ -8,7 +8,7 @@ RUN chown -R app:app $HOME/*
 
 USER app
 WORKDIR $HOME/node
-RUN npm install -q && npm cache clean
+RUN npm install -q
 
 USER root
 COPY . $HOME/node/
