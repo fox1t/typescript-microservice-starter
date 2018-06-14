@@ -1,4 +1,4 @@
-FROM node:9.4.0-alpine
+FROM node:10-alpine
 
 RUN addgroup -S app && adduser -S -G app -s /bin/false app
 ENV HOME=/home/app

@@ -42,7 +42,7 @@ Run this commands from the project folder with `npm run "script-name"`.
 * `update`: easily check for updates and update all dependencies
 
 ## Debugging
-> Warning: This starter uses new V8 [inspect protocol](https://nodejs.org/api/debugger.html) so you have to use at least 7.7.4 if you want to use the included debugger settings.
+> Warning: This starter uses new V8 [inspect protocol](https://nodejs.org/api/debugger.html) so you have to use at least Node.js 7.7.4 if you want to use the included debugger settings.
 
 #### Steps:
 * start dev server with `npm run dev`

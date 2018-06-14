@@ -1,42 +1,43 @@
 {
   "name": "typescript-microservice-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript microservice starter project.",
   "main": "build",
   "author": "Maksim Sinik <maksim@sinik.it>",
   "license": "MIT",
   "scripts": {
-    "predev": "npm-run-all --parallel security-check lint",
-    "prebuild": "npm-run-all clean-build security-check",
+    "predev": "npm run lint",
+    "prebuild": "npm-run-all clean-build",
     "build": "tsc -p ./tsconfig.json",
     "clean-build": "rimraf ./build && mkdir build",
     "update": "npx npm-check -u",
-    "lint": "tslint -c tslint.json -t stylish -p ./tsconfig.json",
-    "security-check": "nsp check",
+    "lint": "tslint --fix -c tslint.json -t stylish -p ./tsconfig.json",
+    "postlint": "tsc --noEmit -p ./tsconfig.json",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel dev localtunnel",
     "start": "cross-env NODE_ENV=production node ./build",
     "dev": "cross-env NODE_ENV=development npm run nodemon",
     "nodemon": "nodemon -e ts -w \"./src\" -x \"npm run debug\"",
-    "debug": "node -r ts-node/register --inspect ./src/index.ts"
+    "debug": "node -r ts-node/register -r dotenv/config --inspect ./src/index.ts",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nucleode/typescript-microservice-starter.git"
   },
   "dependencies": {
-    "cross-env": "^5.1.3"
+    "cross-env": "^5.2.0"
   },
   "devDependencies": {
-    "@types/node": "^9.4.0",
-    "dotenv": "~4.0.0",
-    "localtunnel": "^1.8.2",
-    "nodemon": "^1.11.0",
-    "npm-run-all": "^4.0.2",
-    "nsp": "^3.1.0",
+    "@types/node": "^10.3.3",
+    "dotenv": "^6.0.0",
+    "localtunnel": "^1.9.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "npm-run-all": "^4.1.3",
     "rimraf": "^2.6.1",
-    "ts-node": "^4.1.0",
-    "tslint": "^5.1.0",
-    "typescript": "^2.6.2"
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
   }
 }

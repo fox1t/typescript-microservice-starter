@@ -5,18 +5,24 @@
     "module": "commonjs",
     "outDir": "build",
     "rootDir": "./src",
+    "pretty": true,
+    "noEmitOnError": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "strictNullChecks": true,
-    "allowJs": true
+    "esModuleInterop": true,
+    "removeComments": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
   },
   "formatCodeOptions": {
     "identSize": 2,
     "tabSize": 2
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts"
   ],
   "include": [
     "**/*.ts"
