@@ -1,7 +1,4 @@
-<p align="center"><img src="https://www.nucleode.com/static/img/png/logo_hd.png" alt="Nucleode.com"/></p>
-
 # TypeScript Microservice Starter
-
 
 This is an easy boilerplate for building Node.js microservices with TypeScript. Put your typescript code inside `./src` folder and you are ready to go!
 
