@@ -29,13 +29,14 @@ npm run dev
 ## Included npm scripts
 
 Run this commands from the project folder with `npm run "script-name"`.
-* `dev`: runs in development server with [nsp security check](https://nodesecurity.io/), [ts linter](https://palantir.github.io/tslint/) and `nodemon` watching `.ts` files inside `./src` folder and autorestart on save.
+* `dev`: runs project in development mode, with [ts linter](https://palantir.github.io/tslint/) and `chokidar` watching `.ts` files inside `./src` folder and autorestart on save.
 * `build`: builds all .ts files from `./src` folder to `./build`
 * `lint`: lints source code using `tslint`
-* `security-check`: checks installed dependencies against node security database
-* `share`: runs development server and expose it with [localtunnel](https://localtunnel.github.io/www/)
-* `start`: starts production server. Run `build` command to compile TS to JS before running this.
 * `update`: easily check for updates and update all dependencies
+* `test`: run tests using tap
+* `test:watch`: run tests using tap in watch mode
+* `test:report`: run tests using tap and adds report file
+* `test:reporter`: run tests using tap and convert output to mocha
 
 ## Debugging
 > Warning: This starter uses new V8 [inspect protocol](https://nodejs.org/api/debugger.html) so you have to use at least Node.js 7.7.4 if you want to use the included debugger settings.

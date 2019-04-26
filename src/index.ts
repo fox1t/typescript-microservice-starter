@@ -1,1 +1,1 @@
-console.log('Put your code here!')
+export default () => 'put your code here'

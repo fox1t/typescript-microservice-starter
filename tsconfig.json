@@ -4,17 +4,19 @@
     "target": "es2017",
     "module": "commonjs",
     "outDir": "build",
-    "rootDir": "./src",
     "pretty": true,
     "noEmitOnError": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "strictNullChecks": true,
+    "strictPropertyInitialization": true,
     "esModuleInterop": true,
     "removeComments": true,
-    "allowJs": true,
     "noUnusedLocals": true,
+    "lib": [
+      "esnext"
+    ],
   },
   "formatCodeOptions": {
     "identSize": 2,
@@ -22,9 +24,6 @@
   },
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
   ],
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["./src/**/*.ts"]
 }

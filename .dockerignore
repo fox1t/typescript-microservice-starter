@@ -23,12 +23,14 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build
-
 # Dependency directories
 node_modules
 jspm_packages
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build
+test
+.nyc_output
+package-lock.json
 
 # Optional npm cache directory
 .npm
@@ -40,3 +42,5 @@ jspm_packages
 .DS_Store
 .vscode
 .env
+LICENSE
+README.md

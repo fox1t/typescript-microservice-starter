@@ -6,38 +6,45 @@
   "author": "Maksim Sinik <maksim@sinik.it>",
   "license": "MIT",
   "scripts": {
-    "predev": "npm run lint",
-    "prebuild": "npm-run-all clean-build",
-    "build": "tsc -p ./tsconfig.json",
+    "prebuild": "npm run lint && npm run clean-build",
+    "build": "tsc",
     "clean-build": "rimraf ./build && mkdir build",
     "update": "npx npm-check -u",
+    "prettier": "prettier --loglevel warn --write \"src/**/*.{ts,tsx}\"",
+    "prelint": "npm run prettier",
     "lint": "tslint --fix -c tslint.json -t stylish -p ./tsconfig.json",
-    "postlint": "tsc --noEmit -p ./tsconfig.json",
-    "localtunnel": "lt --port 3000",
-    "share": "npm-run-all --parallel dev localtunnel",
-    "start": "cross-env NODE_ENV=production node ./build",
-    "dev": "cross-env NODE_ENV=development npm run nodemon",
-    "nodemon": "nodemon -e ts -w \"./src\" -x \"npm run debug\"",
+    "predev": "npm run lint",
+    "dev": "cross-env NODE_ENV=development chokidar \"src/**/*.ts\" -c \"npm run debug\" --initial",
     "debug": "node -r ts-node/register -r dotenv/config --inspect ./src/index.ts",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    "test": "npm run lint && npm run tap",
+    "tap": "tap test/**/*.ts",
+    "test:watch": "chokidar \"src/**/*.ts\" \"test/**/*.ts\" -c \"npm run tap\" --initial",
+    "test:report": "npm run test | tee out.tap",
+    "test:reporter": "tap-mocha-reporter xunit < out.tap > junit-testresults.xml"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nucleode/typescript-microservice-starter.git"
   },
-  "dependencies": {
-    "cross-env": "^5.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^10.3.3",
-    "dotenv": "^6.0.0",
-    "localtunnel": "^1.9.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.17.5",
-    "npm-run-all": "^4.1.3",
-    "rimraf": "^2.6.1",
-    "ts-node": "^6.1.1",
-    "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "@types/node": "~11.13.7",
+    "chokidar-cli": "~1.2.2",
+    "cross-env": "~5.2.0",
+    "dotenv": "~7.0.0",
+    "husky": "~2.1.0",
+    "prettier": "~1.17.0",
+    "rimraf": "~2.6.3",
+    "tap": "~13.0.1",
+    "tap-mocha-reporter": "~4.0.1",
+    "ts-node": "~8.1.0",
+    "tslint": "~5.16.0",
+    "tslint-config-prettier": "~1.18.0",
+    "typescript": "~3.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
