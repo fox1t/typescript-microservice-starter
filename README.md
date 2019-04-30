@@ -23,6 +23,13 @@ rm -rf .git && git init && npm init
 # Install development dependencies
 npm i
 
+# Initialize git repo with your own
+git init
+git remote add origin git@github.com:{your_repository}.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
 # start development server
 npm run dev
 ```
