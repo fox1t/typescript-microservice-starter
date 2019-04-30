@@ -16,9 +16,8 @@
     "predev": "npm run lint",
     "dev": "cross-env NODE_ENV=development chokidar \"src/**/*.ts\" -c \"npm run debug\" --initial",
     "debug": "node -r ts-node/register -r dotenv/config --inspect ./src/index.ts",
-    "test": "npm run lint && npm run tap",
-    "tap": "tap test/**/*.ts",
-    "test:watch": "chokidar \"src/**/*.ts\" \"test/**/*.ts\" -c \"npm run tap\" --initial",
+    "test": "tap test/**/*.ts",
+    "test:watch": "chokidar \"src/**/*.ts\" \"test/**/*.ts\" -c \"npm run test\" --initial",
     "test:report": "npm run test | tee out.tap",
     "test:reporter": "tap-mocha-reporter xunit < out.tap > junit-testresults.xml"
   },
@@ -28,14 +27,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "~11.13.7",
+    "@types/node": "~11.13.8",
     "chokidar-cli": "~1.2.2",
     "cross-env": "~5.2.0",
     "dotenv": "~7.0.0",
     "husky": "~2.1.0",
     "prettier": "~1.17.0",
     "rimraf": "~2.6.3",
-    "tap": "~13.0.1",
+    "tap": "~13.1.1",
     "tap-mocha-reporter": "~4.0.1",
     "ts-node": "~8.1.0",
     "tslint": "~5.16.0",
@@ -44,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run build"
     }
   }
 }
