@@ -13,8 +13,7 @@ This is an easy boilerplate for building Node.js microservices with TypeScript. 
 
 ```
 # Clone the repo
-git clone https://github.com/nucleode/typescript-microservice-starter.git
-mv typescript-microservice-starter {your_project_name}
+git clone https://github.com/nucleode/typescript-microservice-starter.git {your_project_name}
 cd {your_project_name}
 
 # Remove reference to the original starter
