@@ -17,6 +17,7 @@
     "lib": [
       "esnext"
     ],
+    "typeRoots" : ["./node_modules/@types", "./typings"]
   },
   "formatCodeOptions": {
     "identSize": 2,
