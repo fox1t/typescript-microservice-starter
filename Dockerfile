@@ -1,8 +1,8 @@
 FROM node:10-alpine as build
 
-# adds deps for node-gyp: remove if no native modules
-RUN apk update && apk upgrade \
-  && apk --no-cache add --virtual builds-deps build-base python
+# adds deps for node-gyp: add if native modules are used
+# RUN apk update && apk upgrade \
+#   && apk --no-cache add --virtual builds-deps build-base python
 
 # set app basepath
 ENV HOME=/home/app
@@ -12,7 +12,7 @@ COPY package.json $HOME/node/
 
 # change workgin dir and install deps in quiet mode
 WORKDIR $HOME/node
-RUN npm install -q
+RUN npm ci -q
 
 # copy all app files
 COPY . $HOME/node/
