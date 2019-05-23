@@ -45,6 +45,9 @@ Run this commands from the project folder with `npm run "script-name"`.
 * `test:report`: run tests using tap and adds report file
 * `test:reporter`: run tests using tap and convert output to mocha
 
+## External typings augmentation
+This starter is already configured to allow you to extend typings of external packages. The logic behind it is based on [this](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-plugin-d-ts.html) official template. To augment a module, just create a folder with the same name as the module you are augmenting and add an index.d.ts in it. [Here](https://github.com/fox1t/fastify-websocket-router/tree/master/typings/fastify) you can find a real world example.
+
 ## Debugging
 > Warning: This starter uses new V8 [inspect protocol](https://nodejs.org/api/debugger.html) so you have to use at least Node.js 7.7.4 if you want to use the included debugger settings.
 
