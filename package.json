@@ -27,19 +27,19 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "~12.0.0",
+    "@types/node": "~12.0.8",
     "cross-env": "~5.2.0",
     "dotenv": "~8.0.0",
-    "husky": "~2.2.0",
-    "nodemon": "~1.19.0",
-    "prettier": "~1.17.0",
+    "husky": "~2.4.1",
+    "nodemon": "~1.19.1",
+    "prettier": "~1.18.2",
     "rimraf": "~2.6.3",
-    "tap": "~13.1.2",
+    "tap": "~14.2.4",
     "tap-mocha-reporter": "~4.0.1",
-    "ts-node": "~8.1.0",
-    "tslint": "~5.16.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.17.0",
     "tslint-config-prettier": "~1.18.0",
-    "typescript": "~3.4.5"
+    "typescript": "~3.5.2"
   },
   "husky": {
     "hooks": {
