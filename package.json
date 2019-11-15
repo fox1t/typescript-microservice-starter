@@ -25,7 +25,9 @@
     "type": "git",
     "url": "https://github.com/nucleode/typescript-microservice-starter.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "make-promises-safe": "^5.1.0"
+  },
   "devDependencies": {
     "@types/node": "^12.12.7",
     "cross-env": "^6.0.3",
