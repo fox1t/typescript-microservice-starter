@@ -22,7 +22,7 @@ git clone https://github.com/nucleode/typescript-microservice-starter.git {your_
 cd {your_project_name}
 
 # Remove reference to the original starter
-rm -rf .git && git init && npm init
+rm -rf .git && npm init
 
 # Install development dependencies
 npm i
