@@ -24,11 +24,14 @@ cd {your_project_name}
 # Remove reference to the original starter
 rm -rf .git && npm init
 
+# Initialize git repo with your own
+git init
+
 # Install development dependencies
 npm i
 
-# Initialize git repo with your own
-git init
+# Add remote origin and make initial commit
+
 git remote add origin git@github.com:{your_repository}.git
 git add .
 git commit -m "Initial commit"
