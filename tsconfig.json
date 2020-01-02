@@ -17,14 +17,15 @@
     "lib": [
       "esnext"
     ],
-    "typeRoots" : ["./node_modules/@types", "./typings"]
-  },
-  "formatCodeOptions": {
-    "identSize": 2,
-    "tabSize": 2
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ]
   },
   "exclude": [
     "node_modules",
   ],
-  "include": ["./src/**/*.ts"]
+  "include": [
+    "./src/**/*.ts"
+  ]
 }
