@@ -9,6 +9,7 @@ ENV HOME=/home/app
 
 # add app dependencies
 COPY package.json $HOME/node/
+COPY package-lock.json $HOME/node/
 
 # change workgin dir and install deps in quiet mode
 WORKDIR $HOME/node
