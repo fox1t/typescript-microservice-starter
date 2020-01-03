@@ -30,7 +30,6 @@ jspm_packages
 build
 test
 .nyc_output
-package-lock.json
 
 # Optional npm cache directory
 .npm
