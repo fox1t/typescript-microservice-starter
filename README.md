@@ -3,7 +3,6 @@
 [![styled with prettier](https://img.shields.io/badge/styled%20with-Prettier-blue.svg)](https://github.com/prettier/prettier)
 [![tslint](https://img.shields.io/badge/linted%20by-TSLint-brightgreen.svg)](https://palantir.github.io/tslint/)
 [![tested with node](https://img.shields.io/badge/tested%20with-node--tap-yellow.svg)](https://github.com/tapjs/node-tap)
-[![Build Status](https://dev.azure.com/nucleode/TypeScript%20Microservice%20Starter/_apis/build/status/nucleode.typescript-microservice-starter?branchName=master)](https://dev.azure.com/nucleode/TypeScript%20Microservice%20Starter/_build/latest?definitionId=39&branchName=master)
 
 This is an easy boilerplate for building Node.js microservices with TypeScript. Put your typescript code inside `./src` folder and you are ready to go!
 
