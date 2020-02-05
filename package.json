@@ -15,7 +15,7 @@
     "dev:clean": "rimraf build",
     "dev:build": "tsc --incremental -p tsconfig.json",
     "dev:start": "node --inspect -r source-map-support/register -r dotenv/config build/index.js",
-    "dev": "cross-env NODE_ENV=development npm run dev:clean && nodemon -w src -e ts --exec 'npm run dev:build && npm run dev:start'",
+    "dev": "cross-env NODE_ENV=development npm run dev:clean && nodemon -w src -e ts --exec \"npm run dev:build && npm run dev:start\"",
     "test": "tap test/**/*.ts",
     "test:watch": "nodemon -e ts -w \"./src\" -w \"./test\" -x \"npm run test\"",
     "test:report": "npm run test | tee out.tap",
