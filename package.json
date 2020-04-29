@@ -29,18 +29,18 @@
     "make-promises-safe": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "^13.7.4",
-    "cross-env": "^7.0.0",
+    "@types/node": "^13.13.4",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "husky": "^4.2.3",
-    "nodemon": "^2.0.2",
-    "prettier": "^1.19.1",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "tap": "^14.10.6",
+    "tap": "^14.10.7",
     "tap-mocha-reporter": "^5.0.1",
-    "tslint": "^6.0.0",
+    "tslint": "^6.1.2",
     "tslint-config-prettier": "~1.18.0",
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.3"
   },
   "husky": {
     "hooks": {
