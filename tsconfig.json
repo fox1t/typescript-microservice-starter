@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2020", // as per https://node.green/ v14 fully supports es2020
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "build",

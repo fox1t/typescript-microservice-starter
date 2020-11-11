@@ -1,4 +1,4 @@
-FROM node:10-alpine as build
+FROM node:14-alpine as build
 
 # adds deps for node-gyp: add if native modules are used
 # RUN apk update && apk upgrade \
@@ -25,7 +25,7 @@ RUN npm run build
 RUN npm prune --production
 
 # start new image for lower size
-FROM node:10-alpine
+FROM node:14-alpine
 
 # create use with no permissions
 RUN addgroup -g 101 -S app && adduser -u 100 -S -G app -s /bin/false app
