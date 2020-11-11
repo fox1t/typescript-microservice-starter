@@ -1,19 +1,23 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
     "target": "es2017",
     "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "build",
     "pretty": true,
     "noEmitOnError": true,
-    "experimentalDecorators": true,
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "removeComments": true,
+    "newLine": "lf",
     "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
     "lib": [
       "esnext"
     ],
@@ -22,9 +26,6 @@
       "./typings"
     ]
   },
-  "exclude": [
-    "node_modules",
-  ],
   "include": [
     "./src/**/*.ts"
   ]
