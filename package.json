@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "npm run lint && rimraf ./build",
     "build": "tsc -p ./tsconfig.json",
+    "start": "node --enable-source-maps build/index.js",
     "update": "npx npm-check -u",
     "prettier": "prettier --loglevel warn --write \"src/**/*.{ts,tsx}\"",
     "prelint": "npm run prettier",
@@ -36,6 +37,7 @@
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
     "tap": "^14.10.7",
     "tap-mocha-reporter": "^5.0.1",
     "tslint": "^6.1.2",
