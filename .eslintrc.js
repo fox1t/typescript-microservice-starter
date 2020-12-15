@@ -1,0 +1,22 @@
+module.exports = {
+  ignorePatterns: ['.eslintrc.js'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: ['./tsconfig.json', './test/tsconfig.json'],
+    tsconfigRootDir: './',
+  },
+  plugins: ['@typescript-eslint', 'prettier'],
+  rules: {
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
+  },
+}
