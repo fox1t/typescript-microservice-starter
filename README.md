@@ -11,7 +11,6 @@ This is an easy boilerplate for building Node.js microservices with TypeScript. 
 * VS Code debugger configs in .vscode folder
 * recommended Dockerfile for secure nodejs container
 * tsconfig.json for [typescript compiler](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-* strict tslint.json for [tslint](https://palantir.github.io/tslint/)
 
 ## Getting Started
 
