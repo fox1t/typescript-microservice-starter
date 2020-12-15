@@ -2,7 +2,7 @@
 
 [![styled with prettier](https://img.shields.io/badge/styled%20with-Prettier-blue.svg)](https://github.com/prettier/prettier)
 [![tslint](https://img.shields.io/badge/linted%20by-TSLint-brightgreen.svg)](https://palantir.github.io/tslint/)
-[![tested with node](https://img.shields.io/badge/tested%20with-node--tap-yellow.svg)](https://github.com/tapjs/node-tap) ![Docker Build](https://github.com/nucleode/typescript-microservice-starter/workflows/Docker%20Build/badge.svg?branch=master)
+[![tested with node](https://img.shields.io/badge/tested%20with-node--tap-yellow.svg)](https://github.com/tapjs/node-tap) ![Node Build](https://github.com/nucleode/typescript-microservice-starter/workflows/Node%20Build/badge.svg) ![Docker Build](https://github.com/nucleode/typescript-microservice-starter/workflows/Docker%20Build/badge.svg?branch=master)
 
 This is an easy boilerplate for building Node.js microservices with TypeScript. Put your typescript code inside `./src` folder and you are ready to go!
 
