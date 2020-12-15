@@ -1,8 +1,12 @@
 name: Docker Build
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
-    branches: master
+    branches:
+      - master
 
 jobs:
   buildx:
@@ -21,5 +25,4 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build
-        run: |
-          docker build .
+        run: docker build .
