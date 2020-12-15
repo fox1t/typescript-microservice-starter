@@ -24,7 +24,5 @@ jobs:
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
 
-      - name: Buildx
-        uses: docker/build-push-action@v2
-        with:
-          platforms: linux/amd64,linux/arm64,linux/386,linux/arm/v6
+      - name: Build
+        run: docker build .
