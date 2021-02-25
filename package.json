@@ -11,7 +11,7 @@
     "start": "node --enable-source-maps build/index.js",
     "update": "npx npm-check -u",
     "prettier": "prettier --loglevel warn --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint --fix --ext .ts \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint --fix --ext .ts --no-error-on-unmatched-pattern \"src/**/*.ts\" \"test/**/*.ts\"",
     "dev:clean": "rimraf build",
     "dev:build": "tsc --incremental -p tsconfig.json",
     "dev:start": "node --inspect -r source-map-support/register -r dotenv/config build/index.js",
