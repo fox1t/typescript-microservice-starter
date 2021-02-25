@@ -28,7 +28,6 @@ node_modules
 jspm_packages
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
-test
 .nyc_output
 
 # Optional npm cache directory
@@ -43,3 +42,6 @@ test
 .env
 LICENSE
 README.md
+.dockerignore
+.github/
+Dockerfile

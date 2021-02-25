@@ -21,7 +21,7 @@ COPY . $HOME/node/
 # compile typescript and build all production stuff
 RUN npm run build
 
-# remove dev dependencies that are not needed in production
+# remove dev dependencies and files that are not needed in production
 RUN npm prune --production
 
 # start new image for lower size
