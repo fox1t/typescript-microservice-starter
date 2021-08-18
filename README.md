@@ -15,6 +15,7 @@ There are only three steps you need to do to be productive after `Stampo` is ini
 
 ## Features
 
+* uses [esbuild](https://esbuild.github.io) and [`nodemon`](https://github.com/remy/nodemon) in dev mode for blazing fast restarts
 * VS Code debugger configs in .vscode folder
 * recommended Dockerfile for secure Node.js production-ready images
 * most strict and backend specific [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) configuration
