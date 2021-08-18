@@ -17,6 +17,10 @@ coverage
 # nyc test coverage
 .nyc_output
 
+# TAP files
+out.tap
+junit-testresults.xml
+
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -28,7 +32,6 @@ node_modules
 jspm_packages
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
-.nyc_output
 
 # Optional npm cache directory
 .npm
