@@ -19,6 +19,7 @@ There are only three steps you need to do to be productive after `Stampo` is ini
 * recommended Dockerfile for secure Node.js production-ready images
 * most strict and backend specific [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) configuration
 * configured tests and reporters via [tap](https://node-tap.org)
+* [dotenv](https://github.com/motdotla/dotenv#readme) for development env vars
 
 ## Getting Started
 ### Clone the repo
@@ -61,7 +62,7 @@ $ npm run dev
 The commands must be run from the project's root folder.
 
 ### `dev`
-It runs the project in development mode. It uses [`nodemon`](https://github.com/remy/nodemon) to watch the `./src/**/*.ts` files and restart the server on save. It exposes the debugger port, ready to be used via the provided VS Code configuration.
+It runs the project in development mode. It uses [`nodemon`](https://github.com/remy/nodemon) to watch the `./src/**/*.ts` files and restart the server on save. It exposes the debugger on the default port (`9229`), ready to be used by the provided VS Code `attach` configuration. This script runs parallelly [esbuild](https://esbuild.github.io) and `tsc --noEmit` to build your code faster.
 ```
 $ npm run dev
 ```
@@ -112,6 +113,9 @@ $ npm run test:watch
 
 ### `test:report`
 It runs tests and reports the results in the widely used `junit` format using [`tap-mocha-reporter`](https://www.npmjs.com/package/tap-mocha-reporter). The default `xunit` reporter can be changed to anyone from the [supported reporters list](https://node-tap.org/docs/reporting/). This command is mainly intended to be used in CI/CD environments. The generated `junit-testresults.xml` can be consumed by automatic reporting systems.
+
+## Env Vars
+`Stampo` includes [dotenv](https://github.com/motdotla/dotenv#readme). You have to rename `.env.example` to `.env` and put your variables inside it. They will be automatically loaded when running `$ npm run dev` script.
 
 ## External typings augmentation
 `Stampo` is configured to allow you to extend typings of external packages using `./typings` folder. The logic behind it is based on [this](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-plugin-d-ts.html) official template. To augment a module, create a folder with the same module name you are augmenting and add an `index.d.ts` file inside it. [Here](https://github.com/fox1t/fastify-websocket-router/tree/master/typings/fastify) you can find a real-world example.
