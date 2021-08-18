@@ -27,6 +27,9 @@ RUN npm prune --production
 # start new image for lower size
 FROM node:14-alpine
 
+# dumb-init registers signal handlers for every signal that can be caught
+RUN apk update && apk add --no-cache dumb-init
+
 # create use with no permissions
 RUN addgroup -g 101 -S app && adduser -u 100 -S -G app -s /bin/false app
 
@@ -45,4 +48,5 @@ EXPOSE 3000
 
 ENV NODE_ENV=production
 
-CMD ["node", "./build"]
+ENTRYPOINT ["dumb-init"]
+CMD ["node", "--enable-source-maps", "build/index.js"]
