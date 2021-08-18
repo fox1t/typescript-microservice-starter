@@ -122,6 +122,7 @@ It runs tests and reports the results in the widely used `junit` format using [`
 * either
   * use the VS Code included `attach` config for the best debugging experience
   <img width="327" alt="image" src="https://user-images.githubusercontent.com/1620916/129894966-15385c33-da0c-4e00-9f6f-a8ddf966e63e.png">
+
   * use the provided debug URL in Chrome
 
 ## Docker Support
