@@ -27,25 +27,25 @@
     "make-promises-safe": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "^16.6.1",
+    "@types/node": "^16.10.2",
     "@types/tap": "^15.0.5",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.29.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
-    "esbuild-node-tsc": "^1.6.1",
+    "esbuild-node-tsc": "^1.7.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^7.0.1",
-    "nodemon": "^2.0.12",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "nodemon": "^2.0.13",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "source-map-support": "^0.5.19",
-    "tap": "^15.0.9",
-    "ts-node": "^10.2.0",
-    "typescript": "^4.3.5"
+    "source-map-support": "^0.5.20",
+    "tap": "^15.0.10",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "husky": {
     "hooks": {
