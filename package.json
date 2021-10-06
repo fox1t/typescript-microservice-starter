@@ -15,7 +15,7 @@
     "dev:start": "node --inspect -r source-map-support/register -r dotenv/config build/index.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "dev:watch:types": "tsc -p ./tsconfig.json --noEmit --watch --preserveWatchOutput",
-    "test": "cross-env TS_NODE_PROJECT=./test/tsconfig.json tap --ts test/**/*.ts",
+    "test": "cross-env TS_NODE_PROJECT=./test/tsconfig.json tap --ts test/",
     "test:watch": "npm run test -- --watch",
     "test:report": "npm run test -- --output-file=out.tap && tap-mocha-reporter xunit < out.tap > junit-testresults.xml"
   },
