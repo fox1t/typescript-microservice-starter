@@ -24,14 +24,15 @@
     "url": "https://github.com/nucleode/typescript-microservice-starter.git"
   },
   "dependencies": {
-    "make-promises-safe": "^5.1.0"
+    "make-promises-safe": "^5.1.0",
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@cspotcode/source-map-support": "^0.6.1",
-    "@types/node": "^16.10.2",
+    "@types/node": "^16.10.3",
     "@types/tap": "^15.0.5",
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "esbuild-node-tsc": "^1.7.0",
