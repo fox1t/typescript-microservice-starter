@@ -11,7 +11,6 @@
     "start": "node --enable-source-maps build/index.js",
     "update": "npx npm-check -u",
     "lint": "eslint --ext .ts --no-error-on-unmatched-pattern \"src/**/*.ts\" \"test/**/*.ts\"",
-    "dev:build": "tsc --incremental -p tsconfig.json",
     "dev:start": "node --inspect -r @cspotcode/source-map-support/register -r dotenv/config build/index.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "dev:watch:types": "tsc -p ./tsconfig.json --noEmit --watch --preserveWatchOutput",
