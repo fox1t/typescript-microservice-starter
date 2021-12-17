@@ -15,7 +15,7 @@ There are only three steps you need to do to be productive after `Stampo` is ini
 
 ## Features
 
-* uses [esbuild](https://esbuild.github.io) and [`nodemon`](https://github.com/remy/nodemon) in dev mode for blazing fast restarts
+* uses [esbuild](https://esbuild.github.io) and [`tsup`](https://tsup.egoist.sh) in dev mode for blazing fast builds and restarts
 * VS Code debugger configs in .vscode folder
 * recommended Dockerfile for secure Node.js production-ready images
 * most strict and backend specific [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) configuration
@@ -63,7 +63,7 @@ $ npm run dev
 The commands must be run from the project's root folder.
 
 ### `dev`
-It runs the project in development mode. It uses [`nodemon`](https://github.com/remy/nodemon) to watch the `./src/**/*.ts` files and restart the server on save. It exposes the debugger on the default port (`9229`), ready to be used by the provided VS Code `attach` configuration. This script runs parallelly [esbuild](https://esbuild.github.io) and `tsc --noEmit` to build your code faster.
+It runs the project in development mode. It uses [`tsup`](https://tsup.egoist.sh) to watch the `./src/**/*.ts` files, build and restart the server on save. It exposes the debugger on the default port (`9229`), ready to be used by the provided VS Code `attach` configuration. This script runs parallelly [esbuild](https://esbuild.github.io) and `tsc --noEmit` to build your code faster.
 ```
 $ npm run dev
 ```
@@ -79,7 +79,7 @@ It runs previously built code from the `./build` folder. In addition, it uses `-
 ```
 $ npm run start
 ```
-It is advised to run Node.js binary directly to avoid any overhead or `sigterm` propagation issues in production.
+This script is included only for convenience to test the production build locally on your dev machine. If needed, `-r dotenv/config` can be add to load the dev env. It is advised to run Node.js binary directly to avoid any overhead or `sigterm` propagation issues in production.
 ```
 $ node --enable-source-maps build/index.js
 ```
