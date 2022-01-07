@@ -1,8 +1,7 @@
-FROM node:14-alpine as build
+FROM node:16-alpine as build
 
 # adds deps for node-gyp: add if native modules are used
-# RUN apk update && apk upgrade \
-#   && apk --no-cache add --virtual builds-deps build-base python
+RUN apk update && apk upgrade && apk --no-cache add --virtual builds-deps build-base python3
 
 # set app basepath
 ENV HOME=/home/app
@@ -25,7 +24,7 @@ RUN npm run build
 RUN npm prune --production
 
 # start new image for lower size
-FROM node:14-alpine
+FROM node:16-alpine
 
 # dumb-init registers signal handlers for every signal that can be caught
 RUN apk update && apk add --no-cache dumb-init
