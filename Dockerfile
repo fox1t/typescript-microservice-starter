@@ -21,6 +21,8 @@ COPY . $HOME/node/
 RUN npm run build
 
 # remove dev dependencies and files that are not needed in production
+RUN rm -rf node_modules
+RUN npm install --only=prod
 RUN npm prune --production
 
 # start new image for lower size
@@ -36,8 +38,7 @@ RUN addgroup -g 101 -S app && adduser -u 100 -S -G app -s /bin/false app
 ENV HOME=/home/app
 
 # copy production complied node app to the new image
-COPY --from=build $HOME/node/ $HOME/node/
-RUN chown -R app:app $HOME/*
+COPY --chown=app:app --from=build $HOME/node/ $HOME/node/
 
 # run app with low permissions level user
 USER app
